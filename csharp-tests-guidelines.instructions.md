@@ -33,7 +33,7 @@ Provide context and coding guidelines that AI should follow when generating code
  - Unit tests have to moq every dependencies.
  - Unit tests have to not use the real database.
  - Unit tests have to not fake a database exept for testing the database layer.
- - Unit tests have to have a 100% coverage.
+ - Unit tests have to cover every fonctions.
  - One test file = one tested function.
  - Unit tests files have to be named `MyTestedFuntion_Tests.cs`
 
@@ -43,12 +43,14 @@ Provide context and coding guidelines that AI should follow when generating code
  - Integration tests have to test every possible api endpoints
  - Integration tests have to test every possible batch arguments combination.
  - Integration tests have to test every possible error cases.
+ - Integration tests have to test every possible input datas.
+ - Integration tests have to test every possible path.
  - Integration test have to be as end to end as possible.
- - Integration tests have to have a 100% coverage.
+ - Integration tests have to cover 100% of the application.
  - Integration tests have to not use the real database.
  - Integration tests have to fake a database filled with fake datas.
  - Integration tests have to use WebApplicationFactory for testing apis.
- - One test file = one tested endpoint.
+ - One test file = one tested entrypoint.
  - Integration tests files have to be named `MyTestedController_MyTestedEndpoint_IntegrationTests.cs` (ex: `User_CreateUser_IntegrationTests.cs` for UserController's CreateUser endpoint).
 
 ## Test Structure
