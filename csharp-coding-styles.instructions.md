@@ -12,6 +12,7 @@ Provide project context and coding guidelines that AI should follow when generat
 ## Rules
 
 1. Always take editorconfig over all rules.
+2. Do not add general comment or title about subjects treated in the code generated
 2. Do not add comment to explain the code, code should be self explanatory with clear names and good structure.
 3. Always prefer clarity/readibility in code.
 4. Always use explicit names.
