@@ -26,6 +26,7 @@ Provide context and coding guidelines that AI should follow when generating code
  - Unit/Integration Tests have to test explicit datas to validate the test case specifically.
  - Unit/Integration Tests have to not use the real database.
  - Unit/Integration Tests have to generate dynamical fake datas which will not be afected by aleas like time, random, etc... .
+ - Unit/Integration Tests have to use Bogus/faker to generate fake datas.
 
 2. *Unit tests** :
 
@@ -83,6 +84,10 @@ public ((Appropriate method type : "void" OR "async Task" generaly)) MyTestedMet
 
  - Use `[Fact]` for simple tests.
  - Use `[Theory]` for parameterized tests.
+ - With xUnit, class constructors are used for test setup, and `IDisposable.Dispose` is used for test teardown. 
+   - Avoid used static private fonction for test setup. 
+     - Prefer tu use class constructor.
+     - Prefer to Generate test variables in the `Arrange` part of the test. 
 
 2. Moq
 
