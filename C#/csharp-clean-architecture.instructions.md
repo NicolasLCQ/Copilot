@@ -20,12 +20,12 @@ The API layer is the entry point for the application.
 It exposes endpoints for clients to interact with.
 It also handles exceptions and errors.
 It handles the mapping between **API** models and **Application** models.
-Controllers (or resources) handle incoming requests, validate them, and delegate processing to the Application layer.
+Ressources (or controllers) handle incoming requests, validate them, and delegate processing to the Application layer.
 
- - It uses **Controllers** to process requests.
- - It uses **Routes** to handle routing.
+ - It uses **Resources** to process requests.
+ - It uses **Routes** to handle routing. A route is a path to a resource.
  - It uses **Models** to implement request and response models.
- - It uses **Extensions** to implement models methods.
+ - It uses **Extensions** to implement model methods.
  - It uses **Helpers** to implement common methods.
  - It uses **Mappers** to convert between **API** models and **Application** models.
  - It uses **Middleware** to handle exceptions, errors, authentification, logging, ... .
@@ -37,13 +37,13 @@ The Application layer is responsible of business logic.
 It uses Use Cases to perform tasks.
 It interacts with other layers throught Interfaces implementations when it needs to use external services.
 It is also responsible of generating business errors.
-It does not handle mapping betwin layers.
+It does not handle mapping between layers.
 
  - It uses **UseCases** to handle business logic.
  - It uses **Interfaces** that the Gateway layer implements to interact with external services.
- - Its also uses **Interfaces** to expose his own services.
+ - It also uses **Interfaces** to expose his own services.
  - It uses **Models** to implement business models.
- - It uses **Extensions** to implement models methods.
+ - It uses **Extensions** to implement model methods.
  - It uses **Helpers** to implement common methods.
 
 3. **Gateway**:
@@ -66,7 +66,7 @@ Schéma d'implémentation :
 ├─ [NomApplication].sln
 ├─ /[NomApplication].Api
 │  ├─[NomApplication].Api.csproj
-│  ├─ Controllers(ou ressources)/
+│  ├─ Ressources(or controllers)/
 │  ├─ Routes/
 │  ├─ Models/
 │  ├─ Extensions/
